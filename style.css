@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Radio Canada", sans-serif;
+  background: hsl(228, 79%, 2%);
+  color: #f5f8ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* ---WeatherForm Styles--- */
+.weatherForm {
+  background: #111722;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border: 1px solid #3a4864;
+  border-radius: 0.5rem;
+  width: 90%;
+  max-width: 400px;
+}
+
+h2 {
+  color: #f5f8ff;
+  padding: 1.5rem;
+  font-size: 1.7rem;
+}
+
+#cityInput {
+  width: 90%;
+  max-width: 300px;
+  margin: 0.5rem auto 0 auto;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #111722;
+  text-align: center;
+}
+
+button {
+  margin: 1rem;
+  padding: 0.3rem 1.2rem;
+  border: none;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  color: #cfab63;
+  border: 1px solid #ffff00;
+  background-color: #111722;
+  transition: 1s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffff00;
+  color: #111722;
+  border: 1px solid #fff;
+}
+
+/* ------WeatherInfo Styles------ */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.cityDisplay,
+.tempDisplay {
+  font-size: 1.5rem;
+  font-weight: bold;
+  /* margin-bottom: 25px; */
+}
+.humidityDisplay {
+  font-weight: bold;
+  font-size: 0.9rem;
+  /* margin-bottom: 25px; */
+}
+.descDisplay {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.weatherEmoji {
+  font-size: 3.2rem;
+  margin-top: -1rem;
+}
+.errorDisplay {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* ---Media Queries --- */
+@media (max-width: 350px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  #cityInput {
+    max-width: 300px;
+  }
+
+  button {
+    padding: 0.3rem 1rem;
+    font-size: 0.9rem;
+  }
+  .card {
+    gap: 0.7rem;
+  }
+
+  .cityDisplay,
+  .tempDisplay {
+    font-size: 1.2rem;
+  }
+
+  .humidityDisplay {
+    font-size: 0.8rem;
+  }
+
+  .descDisplay {
+    font-size: 1.1rem;
+  }
+
+  .weatherEmoji {
+    font-size: 3.2rem;
+  }
+
+  .errorDisplay {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 261px) {
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  #cityInput {
+    width: 100%;
+    max-width: 300px;
+    margin-top: -0.2rem;
+  }
+
+  .card {
+    gap: 0.6rem;
+  }
+
+  .cityDisplay,
+  .tempDisplay {
+    font-size: 1rem;
+  }
+
+  .humidityDisplay {
+    font-size: 0.7rem;
+  }
+
+  .descDisplay {
+    font-size: 1rem;
+  }
+
+  .weatherEmoji {
+    font-size: 3rem;
+  }
+
+  .errorDisplay {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 225px) {
+  h2 {
+    font-size: 0.9rem;
+  }
+
+  #cityInput {
+    max-width: 300px;
+  }
+
+  button {
+    padding: 0.3rem 0.9rem;
+  }
+
+  .card {
+    gap: 0.5rem;
+  }
+
+  .cityDisplay,
+  .tempDisplay {
+    font-size: 0.8rem;
+  }
+
+  .humidityDisplay {
+    font-size: 0.8rem;
+  }
+
+  .descDisplay {
+    font-size: 0.9rem;
+  }
+
+  .weatherEmoji {
+    font-size: 2.5rem;
+  }
+
+  .errorDisplay {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
